@@ -1,0 +1,952 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+body{
+    background: linear-gradient(to bottom, rgb(12, 12, 12), black);
+    height: 100vh;
+}
+
+/* Header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+
+    background: black;
+    box-shadow: 0 0 20px black;
+    padding: 0 40px;
+    height: 110px;
+    width: 100%;
+}
+.logoLink{
+    height: 90px;
+    width: 90px;
+}
+.logoLink:hover{
+    opacity: .8;
+    transition: .3s;
+}
+.logoLink:active{
+    scale: .93;
+    transition: .1s;
+}
+.logoLink img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.header nav{
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+}
+.headerLink{
+    position: relative;
+    font-size: 29px;
+}
+.headerLink:hover{
+    color: rgb(0, 217, 255);
+    transition: .3s;
+}
+.headerLink::after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: white;
+    height: 3px;
+    width: 0;
+    bottom: 3px;
+    transition: .3s;
+}
+.headerLink:hover::after{
+    width: 100%;
+    background: rgb(0, 217, 255);
+}
+.nomeProfileHome{
+
+}
+.spaceForProfileImg{
+    position: relative;
+
+    height: 75px;
+    width: 75px;
+}
+.profileImg{
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid rgb(61, 61, 61);
+    height: 100%;
+    width: 100%;
+    border-radius: 50rem;
+}
+.profileImg:hover{
+    transition: .4s;
+    border: 2px solid white;
+}
+.profileImg:hover + .profileOptions{
+    display: flex;
+}
+.profileOptions{
+    display: none;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+
+    background: black;
+    border: solid 2px rgb(32, 32, 32);
+    top: 75px;
+    right: 0;
+    box-shadow: 0 0 20px black;
+    border-radius: 10px;
+    gap: 15px;
+    padding: 20px;
+    width: 200px;
+    z-index: 2;
+}
+.profileOptions:hover{
+    display: flex;
+}
+.profileOption{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+    gap: 15px;
+}
+.profileOption:hover, .profileOption:hover .profileIcon{
+    color: rgb(150, 150, 150);
+    transition: .2s;
+}
+.profileOptions hr{
+    border: none;
+    background: rgb(32, 32, 32);
+    width: 110%;
+    height: 1px;
+}
+.headerSpace{
+    height: 120px;
+    width: 100%;
+}
+
+/* Header */
+
+
+/* Erro404 */
+
+.errorPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 83vh;
+}
+.errorPage h1{
+    font-size: 150px;
+    color: rgb(0, 217, 255);
+}
+.errorPage p{
+    font-size: 60px;
+    color: white;
+}
+
+/* Erro404 */
+
+
+/* Home */
+
+.bodyHome{
+    display: flex;
+}
+.containerContentHome, .containerImgHome{
+    width: 50%;
+    height: 83vh;
+}
+.containerContentHome{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    padding: 50px;
+}
+.divTituloHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 7px;
+}
+.divTituloHome h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 80px;
+    height: 70px;
+    color: rgba(0, 217, 255);
+}
+.divTituloHome h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(0, 162, 190, 1);
+    font-size: 60px;
+    height: 50px;
+}
+.containerContentHome p{
+    text-align: center;
+
+    font-size: 28px;
+}
+.azulClaro{
+    font-weight: 800;
+    color: rgba( 111,233, 255);
+}
+.containerIconsHome{
+    display: flex;
+    justify-content: space-between;
+
+    height: 110px;
+    width: 400px;
+    gap: 40px;
+}
+.divIconsHome{
+    display: grid;
+    place-items: center;
+    position: relative;
+
+    width: 110px;
+    height: 110px;
+    border-radius: 50rem;
+}
+.fundoIcon{
+    position: absolute;
+
+    background: rgb(0, 217, 255);
+    width: 0;
+    height: 0;
+    border-radius: 50rem;
+}
+.iconsHome{
+    display: grid;
+    place-items: center;
+    position: absolute;
+
+    box-sizing: content-box;
+    background: transparent;
+    border: solid 6px rgb(0, 217, 255);
+    border-radius: 50rem;
+    font-size: 60px;
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+}
+.iconsHome:hover{
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+    transition: .4s;
+}
+.iconsHome:hover i{
+    color: black;
+    transition: .4s;
+}
+.divIconsHome:hover .fundoIcon{
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+}
+.divIconsHome:active{
+    transform: scale(.89);
+    transition: .2s;
+}
+.containerImgHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 50px;
+}
+.vinilHome{
+    cursor: pointer;
+    height: auto;
+    animation: rotate 10s linear infinite;
+    width: 350px;
+}
+.containerBtnHome{
+    display: flex;
+
+    gap: 20px;
+    width: 80%;
+}
+.divBtnHome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    width: 50%;
+    height: 88px;
+    border-radius: 20px;
+}
+.fundoBtn{
+    position: absolute;
+
+    background: transparent;
+    border-radius: 20px;
+    z-index: 0;
+    width: 0;
+    height: 0;
+}
+.divBtnHome a{
+    position: absolute;
+    
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    background: transparent;
+    border: solid 5px rgb(0, 217, 255);
+    box-shadow: 0 0 15px black;
+    z-index: 2;
+    font-size: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+}
+.divBtnHome:hover .fundoBtn{
+    background: rgb(0, 217, 255);
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+}
+.divBtnHome:hover a{
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+    color: black;
+    transition: .4s;
+}
+.divBtnHome:active{
+    transform: scale(.95);
+    transition: .2s;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Home */
+
+
+/* Login/Cadastro */
+
+.bodyCadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100%;
+}
+.divCadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 50vw;
+    height: 100vh;
+}
+.divImgCadastro{
+    background-image: url(/images/PessoaComMusica.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.containerLogoCadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerLogoCadastro p{
+    font-size: 50px;
+    color: rgb(0, 217, 255);
+}
+.logoCadastro{
+    height: 140px;
+    width: 140px;
+}
+.formCadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 500px;
+}
+.divInputCadastro{
+    position: relative;
+
+    width: 60%;
+    height: 50px;
+}
+.inputCadastro{
+    position: absolute;
+
+    background: transparent;
+    border: none;
+    border-bottom: solid 3px white;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+.inputCadastro:focus{
+    border-bottom: solid 3px rgb(0, 217, 255);
+    transition: .3s;
+}
+.inputCadastro:focus + .labelCadastro{
+    font-size: 12px;
+    bottom: 30px;
+    color: rgb(0, 217, 255);
+    transition: .3s;
+}
+.inputCadastro:valid + .labelCadastro{
+    font-size: 12px;
+    bottom: 30px;
+    transition: .3s;
+}
+.labelCadastro{
+    position: absolute;
+
+    pointer-events: none;
+    bottom: 8px;
+    left: 19px;
+}
+.divInputCadastro i{
+    position: absolute;
+
+    color: white;
+    right: 19px;
+    top: 15px;
+    font-size: 20px;
+}
+.formCadastro a{
+    color: rgb(0, 217, 255);
+    text-decoration: solid 2px underline rgb(0, 217, 255);
+}
+.btnCadastro{
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    border: solid 3px black;
+    border-bottom: solid 9px black;
+    border-radius: 16px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 20px;
+    font-size: 16px;
+    width: 60%;
+    background: rgb(122, 122, 122);
+}
+.btnCadastro:hover{
+    background: rgb(0, 217, 255);
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+    transition: .4s;
+}
+.btnCadastro:active{
+    border: solid 3px black;
+    margin-top: 6px;
+    transition: 0s;
+}
+
+/* Login/Cadastro */
+
+
+/* Alterar Imagem */
+
+.bodyAlterarImagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 20px;
+    height: 100vh;
+}
+.bodyAlterarImagem img{
+    cursor: pointer;
+    object-fit: cover; 
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.formAlterarImagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    width: 300px;
+}
+.formAlterarImagem input{
+    border: none;
+    color: black;
+    box-shadow: 0 0 15px black;
+    padding: 10px;
+    width: 100%;
+    height: 60px;
+    border-radius: 50rem;
+}
+.formAlterarImagem input[type="text"]{
+    text-align: center;
+    
+    font-size: 16px;
+}
+.formAlterarImagem input[type="text"]:focus{
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+    border: solid 2px rgb(0, 217, 255);
+    transition: .4s;
+}
+.formAlterarImagem input[type="submit"]{
+    background-color: rgb(0, 217, 255);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+.formAlterarImagem input[type="submit"]:hover{
+    box-shadow: 0 0 15px rgb(0, 217, 255);
+    transition: .4s;
+}
+.formAlterarImagem input[type="submit"]:active{
+    transform: scale(.98);
+}
+.atualizarImgUrl{
+    font-size: 40px;
+}
+.atualizarImgUrl i{
+    cursor: pointer;
+}
+.atualizarImgUrl i:active{
+    animation: rotate .5s infinite linear;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.containerImgAmplificada{
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.72);
+    height: 100vh;
+    width: 100vw;
+}
+.divImgAmplificada{
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+}
+.arrowAlterarImagem{
+    position: fixed;
+    color: white;
+    cursor: pointer;
+    top: 25px;
+    left: 35px;
+    font-size: 45px;
+}
+.divImgAmplificada img{
+    cursor: default;
+    height: 500px;
+    width: 500px;
+    border-radius: 0;
+    box-shadow: 0 0 30px black;
+}
+
+/* Alterar Imagem */
+
+
+/* Listar Usuarios */
+
+.bodyListUsers{
+    display: grid;
+    place-items: center;
+
+    height: auto;
+    width: 100%;
+}
+.tableListarUsuarios{
+    border-collapse: collapse;
+    margin: auto;
+    background: black;
+    box-shadow: 0 0 15px black;
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.containerHeadTable{
+    background: rgba(15, 15, 15, 1);
+}
+.tableListarUsuarios th{
+    border: solid 3px rgb(37, 37, 37);
+    padding: 10px;
+}
+.containerAcoesListMusic{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btnDeletarListUsers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    background: red;
+    border: none;
+    margin: 0 auto;
+    padding: 14px;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+}
+.btnDeletarListUsers:hover{
+    transition: .2s;
+    background: rgba(165, 0, 0, 1);
+}
+.btnDeletarListUsers:active{
+    scale: .93;
+}
+.btnDeletarListUsers i{
+    font-size: 20px;
+}
+.btnAddListMusic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    background: gray;
+    border: none;
+    padding: 14px;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+.btnAddListMusic:hover{
+    transition: .2s;
+    background: rgba(88, 88, 88, 1);
+}
+.btnAddListMusic:active{
+    scale: .93;
+}
+.imgListUsers{
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+}
+
+/* Listar Usuarios */
+
+
+/* Cadastro Musicas/Artistas */
+
+.bodyCadastroArt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 84vh;
+    gap: 50px;
+}
+.bodyCadastro h1{
+    font-size: 40px;
+}
+.formCadsArt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    background: black;
+    height: auto;
+    box-shadow: 0 0 15px white;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    width: 440px;
+}
+.containerIptCadsArtistas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    height: auto;
+    width: 100%;
+}
+.iptCadsArt{
+    background: white;
+    color: black;
+    border: solid 3px white;
+    padding: 15px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+}
+.iptCadsArt:focus{
+    border: solid 3px rgb(0, 217, 255);
+    transition: .3s;
+}
+.iptCadsArt[type="text"], .iptCadsArt[type="number"]{
+    padding-bottom: 0;
+    padding-top: 25px;
+    font-size: 18px;
+}
+.iptCadsArt[type="text"]:focus + label, .iptCadsArt[type="number"]:focus + label, #bioArt:focus + label{
+    color: rgba(1, 171, 201, 1);
+    transition: .3s;
+    top: 8px;
+    font-size: 14px;
+}
+.iptCadsArt[type="text"]:valid + label, .iptCadsArt[type="number"]:valid + label{
+    top: 8px;
+    font-size: 14px;
+}
+.containerIptCadsArtistas label{
+    position: absolute;
+    
+    color: black;
+    pointer-events: none;
+    left: 16px;
+}
+.bioArtLabel{
+    font-size: 14px;
+    top: 8px;
+}
+.bioArt{
+    overflow-wrap: break-word;
+    overflow: auto;
+    resize: none;
+    background: white;
+    color: black;
+    border: solid 3px white;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    padding-bottom: 0;
+    padding-top: 25px;
+    height: 200px;
+}
+.cadsArtSymbol{
+    position: absolute;
+    
+    color: black;
+    pointer-events: none;
+    background: white;
+    right: 10px;
+    font-size: 22px;
+    padding: 8px;
+}
+.bioSymbol{
+    position: absolute;
+    
+    color: black;
+    pointer-events: none;
+    background: white;
+    right: 18px;
+    top: 10px;
+    font-size: 16px;
+}
+.iptCadsArt[type="submit"]{
+    cursor: pointer;
+    border: none;
+    background: rgb(0, 217, 255);
+    font-size: 17px;
+    height: 55px;
+}
+.iptCadsArt[type="submit"]:hover{
+    transition: .4s;
+    background: rgba(0, 136, 160, 1);
+}
+#duracaoMus{
+    padding-left: 98px;
+    font-size: 16px;
+}
+.iptCadsArt[type="time"]:valid + label{
+    color: rgba(1, 171, 201, 1);
+    transition: .3s;
+    font-size: 14px;
+}
+
+/* Cadastro Musicas/Artistas */
+
+
+/* Em + de Uma Página */
+
+.homeSimbol{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 40px;
+    z-index: 2;
+}
+.homeSimbol:hover i{
+    color: rgb(0, 217, 255);
+    transition: .3s;
+}
+.containerCard{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+
+    top: 40px;
+    width: 100vw;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+}
+.cardErro{
+    border: solid 2px rgb(255, 0, 0);
+    background: rgba(255, 100, 100, 1);
+}
+.cardCerto{
+    border: solid 2px rgb(0, 255, 21);
+    background: rgb(121, 255, 139);
+}
+.cardErro p{
+    color: black;
+    font-size: 20px;
+}
+.cardErro i{
+    color: black;
+    cursor: pointer;
+    font-size: 26px;
+}
+.containerTopOfList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+    margin-top: 20px;
+}
+.containerTopOfList h1{
+    font-size: 40px;
+}
+.formFiltrar{
+    position: relative;
+
+    z-index: -1;
+}
+.formFiltrar input{
+    border: none;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.formFiltrar button{
+    position: absolute;
+
+    cursor: pointer;
+    background: white;
+    border: none;
+    right: 2px;
+    height: 100%;
+    width: 36px;
+    border-radius: 0 4px 4px 0;
+}
+.formFiltrar i{
+    color: black;
+    font-size: 20px;
+}
+.containerAcoesListMusic{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btnAddListMusic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    background: gray;
+    border: none;
+    padding: 14px;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+.btnAddListMusic:hover{
+    transition: .2s;
+    background: rgba(88, 88, 88, 1);
+}
+.btnAddListMusic:active{
+    scale: .93;
+}
+
+/* Em + de Uma Página */
+
+
+/* Special Classes */
+
+.invert{
+    transform: scaleX(-1);
+}
+.clickable{
+    cursor: pointer;
+}
+.show{
+    display: flex;
+}
+.hide{
+    display: none;
+}
+.running{
+    animation-play-state: running;
+}
+.paused{
+    animation-play-state: paused;
+}
+
+/* Special Classes */

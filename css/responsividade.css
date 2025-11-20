@@ -1,0 +1,113 @@
+/* Header */
+
+@media (max-width: 880px) {
+    .headerLink{
+        font-size: 24px;
+    }
+    .profileOptions{
+        gap: 12px;
+        padding: 15px;
+        width: 180px;
+    }
+    .profileOption{
+        font-size: 12px;
+        gap: 10px;
+    }
+    .profileOptions hr{
+        width: 100%;
+    }
+}
+@media (max-width: 780px) {
+    .header{
+        padding: 0 25px;
+        height: 95px;
+    }
+    .logoLink{
+        height: 70px;
+        width: 70px;
+    }
+    .headerLink{
+        font-size: 19px;
+    }
+    .nomeProfileHome{
+        font-size: 12px;
+    }
+    .spaceForProfileImg{
+        height: 55px;
+        width: 55px;
+    }
+    .profileOptions{
+        top: 55px;
+        gap: 8px;
+        padding: 12px;
+        width: 150px;
+    }
+    .profileOption{
+        font-size: 10px;
+    }
+    .profileOptions hr{
+        width: 105%;
+        height: 1px;
+    }
+}
+@media (max-width: 620px) {
+    .headerLink{
+        font-size: 16px;
+    }
+    .header nav{
+        gap: 15px;
+    }
+    .headerLink::after{
+        height: 2px;
+        bottom: 2px;
+    }
+}
+@media (max-width: 560px) {
+    .header{
+        padding: 0 20px;
+        height: 85px;
+    }
+    .logoLink{
+        height: 60px;
+        width: 60px;
+    }
+    .headerLink{
+        font-size: 13px;
+    }
+    .nomeProfileHome{
+        font-size: 11px;
+    }
+    .spaceForProfileImg{
+        height: 45px;
+        width: 45px;
+    }
+    .profileOptions{
+        top: 45px;
+        padding: 10px;
+        width: 120px;
+    }
+    .profileOption{
+        font-size: 8px;
+    }
+}
+@media (max-width: 450px) {
+    .logoLink{
+        height: 45px;
+        width: 45px;
+    }
+    .header nav{
+        flex-direction: column;
+        
+        gap: 6px;
+    }
+}
+@media (max-width: 370px) {
+    .headerLink{
+        font-size: 10px;
+    }
+    .nomeProfileHome{
+        font-size: 8px;
+    }
+}
+
+/* Header */
